@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Lilita';
+    src: url('../assets/fonts/LilitaOne-Regular.ttf') format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('assets/borger.png') center/cover no-repeat;
+
+    padding: 2rem 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Lilita', Arial, sans-serif;
+    font-weight: 0.3rem;
+    font-size: 2.4rem;
+    color: #ffb703;
+    letter-spacing: 1px;
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: black;
+    background-color: #ffb703;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    transform: scale(1.05);
+    box-shadow: #4e4e4e 0px 8px 0px,
+        #1b1b1b 5px 0px 0px;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 650px;
+}
+
+.tag {
+    font-family: 'Lilita', sans-serif;
+    font-weight: 0.3rem;
+    background-color: rgba(255, 183, 3, 0.15);
+    color: #ffb703;
+    width: fit-content;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.hero-content h1 {
+    font-family: 'Lilita', sans-serif;
+    font-weight: 0.3rem;
+    font-size: clamp(3rem, 6vw, 5.2rem);
+    line-height: 0.95;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    max-width: 10ch;
+}
+
+.hero-content p {
+    color: #ddd;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 1rem 1.8rem;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #ffb703;
+    color: black;
+}
+
+.btn-secondary {
+    border: 2px solid #fff;
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    box-shadow: #4e4e4e 0px 8px 0px,
+        #1b1b1b 5px 0px 0px;
+    transform: translateY(-3px);
+}
+
+/* SECTIONS */
+
+section,
+main {
+    padding: 6rem 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title span {
+    color: #ffb703;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-family: 'Lilita', sans-serif;
+    font-weight: 0.3rem;
+    font-size: 2.8rem;
+    margin-top: 0.7rem;
+}
+
+/* HIGHLIGHTS */
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.highlight-card {
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.highlight-card:hover {
+    box-shadow: #ffb703 0px 0px 70px;
+    transform: translateY(-8px);
+}
+
+.highlight-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-weight: 0.1rem;
+    color: #ffb703;
+    font-family: 'Lilita', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.card-content p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.price {
+    color: #ffb703;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* MENU */
+
+.img-burger {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+
+
+
+
+}
+
+.menu-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-info {
+    padding: 2rem;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.menu-header h3 {
+    color: #e6e5e5;
+    font-family: 'Lilita', sans-serif;
+    font-weight: 0.3rem;
+    font-size: 1.5rem;
+}
+
+.menu-header span {
+    color: #ffb703;
+    font-weight: bold;
+}
+
+.menu-info p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.menu-info button {
+    border: none;
+    background-color: #ffb703;
+    color: black;
+    padding: 1rem 1.4rem;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-info button:hover {
+    transform: scale(1.05);
+}
+
+/* ABOUT */
+
+.about {
+    background-color: #181818;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.about-content span {
+    color: #ffb703;
+    font-weight: bold;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.about-content p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 3rem 8%;
+    background-color: black;
+    text-align: center;
+}
+
+.footer h2 {
+    color: #ffb703;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    color: #999;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .menu-item {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .about-content h2 {
+        font-size: 2.2rem;
+    }
+}
