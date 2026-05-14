@@ -220,9 +220,40 @@ main {
     display: block;
 
 
-
-
 }
+
+/* TENTAIVA DE MOOOOOOOOOOOODAAAAAAAAAAAAAAAL */
+
+.highlight-card.active {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1.2);
+
+    width: 500px;
+
+    z-index: 9999;
+
+    box-shadow: #ffb703 0px 0px 70px;
+
+    transition: 0.3s;
+}
+
+.highlight-card.active img {
+    height: 350px;
+}
+
+.highlight-card.active .card-content h3 {
+    font-size: 2rem;
+}
+
+.highlight-card.active .price {
+    font-size: 1.5rem;
+}
+
 
 .menu-grid {
     display: grid;
@@ -285,6 +316,11 @@ main {
 .menu-info button:hover {
     transform: scale(1.05);
 }
+
+
+
+
+
 
 /* ABOUT */
 
