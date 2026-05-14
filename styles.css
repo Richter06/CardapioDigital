@@ -222,7 +222,8 @@ main {
 
 }
 
-/* TENTAIVA DE MOOOOOOOOOOOODAAAAAAAAAAAAAAAL */
+/* TENTAIVA DE MODAL */
+/* Se algúem estiver lendo isso, eu passei horas da minha vida tentando fazer esse modal funcionar e não conseguia, estava prestes a desistir...até eu perceber que o live server estava desligado e por isso eu estava vendo uma página estatica.. */
 
 .highlight-card.active {
 
@@ -231,9 +232,13 @@ main {
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.05);
 
-    width: 500px;
+    width: min(500px, 90vw);
+
+    max-height: 90vh;
+
+    overflow: hidden;
 
     z-index: 9999;
 
@@ -402,6 +407,22 @@ main {
         gap: 1rem;
     }
 
+    .tag {
+margin: 0 auto;
+
+
+    }
+
+.btn-primary,
+.btn-secondary {
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 1.8rem;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
     .hero-buttons {
         flex-direction: column;
     }
@@ -416,5 +437,26 @@ main {
 
     .about-content h2 {
         font-size: 2.2rem;
+    }
+
+    .highlight-card.active {
+
+        width: 95vw;
+
+        transform: translate(-50%, -50%) scale(1);
+
+        max-height: 80vh;
+    }
+
+    .highlight-card.active img {
+        height: 200px;
+    }
+
+    .highlight-card.active .card-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .highlight-card.active .price {
+        font-size: 1.2rem;
     }
 }
