@@ -1,18 +1,21 @@
 const cards = document.querySelectorAll('.highlight-card');
+const body = document.body;
 
 cards.forEach(card => {
 
     card.addEventListener('click', () => {
 
-        cards.forEach(otherCard => {
+        const isActive = card.classList.contains('active');
 
-            if (otherCard !== card) {
-                otherCard.classList.remove('active');
-            }
+        // fecha todos
+        cards.forEach(c => c.classList.remove('active'));
+        body.classList.remove('card-open');
 
-        });
-
-        card.classList.toggle('active');
+        // se não estava ativo, abre
+        if (!isActive) {
+            card.classList.add('active');
+            body.classList.add('card-open');
+        }
 
     });
 
