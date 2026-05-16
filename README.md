@@ -130,7 +130,7 @@ git clone https://github.com/richter06/CardapioDigital.git
 
 Depois basta abrir o `index.html` no navegador.
 
-Recomendado utilizar a extensão **Live Server** no VS Code.
+Recomendado utilizar a extensão **Live Server** no VS Code (ou parecidas).
 
 ---
 
