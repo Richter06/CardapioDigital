@@ -481,15 +481,34 @@ main {
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 1rem;
 }
 
 .footer-links a {
-    color: white;
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 55px;
+
+    background-color: #ffb703;
+    border-radius: 50%;
+
+    transition: 0.3s;
 }
 
+.footer-links a:hover {
+    transform: translateY(-5px);
+    box-shadow: #ffb703 0px 0px 20px;
+}
 
+.icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
 
 
 
