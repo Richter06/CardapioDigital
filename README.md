@@ -125,7 +125,7 @@ IntersectionObserver
 Clone o projeto:
 
 ```bash
-git clone https://github.com/richter06/cardapioDigital.git
+git clone https://github.com/richter06/CardapioDigital.git
 ```
 
 Depois basta abrir o `index.html` no navegador.
