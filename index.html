@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Sabor Supremo</title>
   <script src="modal.js" defer></script>
+  <script src="pop.js" defer></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -61,7 +63,7 @@
 
     <div class="highlight-grid">
 
-      <article class="highlight-card">
+      <article class="highlight-card pop">
         <img src="assets/brioche.png" alt="Burger Artesanal">
 
         <div class="card-content">
@@ -78,7 +80,7 @@
         </div>
       </article>
 
-      <article class="highlight-card">
+      <article class="highlight-card pop">
         <img src="assets/bacon.png" alt="Burger Bacon">
 
         <div class="card-content">
@@ -95,7 +97,7 @@
         </div>
       </article>
 
-      <article class="highlight-card">
+      <article class="highlight-card pop">
         <img src="./assets/veg.png" alt="Burger Especial">
 
         <div class="card-content">
@@ -127,7 +129,7 @@
     <div class="menu-grid">
 
       <!-- ITEM -->
-      <article class="menu-item">
+      <article class="menu-item pop">
 
         <img class="img-burger" src="./assets/cheeseBacon.png" alt="Hambúrguer">
 
@@ -152,7 +154,7 @@
       </article>
 
       <!-- ITEM -->
-      <article class="menu-item">
+      <article class="menu-item pop">
 
         <img class="img-burger" src="./assets/doubleSupreme.png" alt="Hambúrguer">
 
@@ -177,7 +179,7 @@
       </article>
 
       <!-- ITEM -->
-      <article class="menu-item">
+      <article class="menu-item pop">
 
         <img class="img-burger" src="./assets/batata.png" alt="Batata Frita">
 
@@ -204,6 +206,94 @@
     </div>
 
   </main>
+
+
+
+  <section class="testimonials" id="avaliacao">
+
+    <div class="section-title">
+      <span>Avaliações</span>
+      <h2>O que nossos clientes dizem</h2>
+    </div>
+
+    <div class="testimonial-grid">
+
+      <article class="testimonial-card pop">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          Melhor hambúrguer que já comi. Atendimento rápido
+          e ingredientes absurdamente bons.
+        </p>
+
+        <div class="client">
+
+          <img src="assets/cliente1.png" alt="Cliente">
+
+          <div>
+            <h3>Jorge Paz</h3>
+            <span>Cliente frequente</span>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="testimonial-card pop">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          O bacon é surreal. Pedi uma vez e agora virou
+          obrigação toda semana.
+        </p>
+
+        <div class="client">
+
+          <img src="assets/cliente2.png" alt="Cliente">
+
+          <div>
+            <h3>João Gabriel</h3>
+            <span>Via iFood</span>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="testimonial-card pop">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          Ambiente incrível e lanche impecável.
+          Dá pra sentir a qualidade.
+        </p>
+
+        <div class="client">
+
+          <img src="assets/cliente3.png" alt="Cliente">
+
+          <div>
+            <h3>Cauan Sales</h3>
+            <span>Cliente premium</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
 
   <!-- SOBRE -->
   <section class="about">
@@ -244,6 +334,7 @@
   </footer>
 
 
-
+  <div class="overlay" id="overlay"></div>
 </body>
+
 </html>

@@ -19,18 +19,37 @@ body {
     color: white;
 }
 
-body::before {
-    content: "";
+.overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0);
-    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
     pointer-events: none;
-    z-index: 999;
+    transition: 0.3s;
+    z-index: 9998;
 }
 
-body.card-open::before {
-    background: rgba(0, 0, 0, 0.7);
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.pop {
+
+    opacity: 0;
+
+    transform: translateY(80px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.pop.show {
+
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* HERO */
@@ -59,7 +78,7 @@ body.card-open::before {
     width: 200px;
     margin-bottom: 30px;
     margin-left: 2%;
-    
+
 
 }
 
@@ -185,6 +204,7 @@ main {
 }
 
 .highlight-card {
+    position: relative;
     background-color: #1b1b1b;
     border-radius: 20px;
     overflow: hidden;
@@ -192,8 +212,11 @@ main {
 }
 
 .highlight-card:hover {
+
     box-shadow: #ffb703 0px 0px 70px;
-    transform: translateY(-8px);
+
+    margin-top: -8px;
+    margin-bottom: 8px;
 }
 
 .highlight-card img {
@@ -241,25 +264,15 @@ main {
 /* Se algúem estiver lendo isso, eu passei horas da minha vida tentando fazer esse modal funcionar e não conseguia, estava prestes a desistir...até eu perceber que o live server estava desligado e por isso eu estava vendo uma página estatica.. */
 
 .highlight-card.active {
-
     position: fixed;
-
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%) scale(1.05);
-
     width: min(500px, 90vw);
-
     max-height: 90vh;
-
     overflow: hidden;
-
     z-index: 9999;
-
     box-shadow: #ffb703 0px 0px 70px;
-
-    transition: 0.3s;
 }
 
 .highlight-card.active img {
@@ -338,7 +351,67 @@ main {
 }
 
 
+.testimonials {
+    padding: 6rem 8%;
+    background-color: #111;
+}
 
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+
+    background-color: #1b1b1b;
+
+    padding: 2rem;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: #ffb703 0px 0px 40px;
+}
+
+.stars {
+    color: #ffb703;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.client img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.client span {
+    color: #999;
+    font-size: 0.9rem;
+}
 
 
 
@@ -357,23 +430,25 @@ main {
     position: absolute;
     inset: 0;
 
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 
     z-index: 0;
 }
+
 .about-content {
     text-align: center;
     position: relative;
     z-index: 1;
 }
 
-.about-content span {    
+.about-content span {
     margin: 0 auto;
     color: #ffb703;
     font-weight: bold;
 }
 
 .about-content h2 {
+    font-family: 'Lilita', sans-serif;
     text-align: center;
     font-size: 3rem;
     margin: 1rem 0;
@@ -393,6 +468,7 @@ main {
 }
 
 .footer h2 {
+    font-family: 'Lilita', sans-serif;
     color: #ffb703;
     margin-bottom: 1rem;
 }
@@ -412,6 +488,11 @@ main {
     color: white;
     text-decoration: none;
 }
+
+
+
+
+
 
 /* RESPONSIVO */
 
